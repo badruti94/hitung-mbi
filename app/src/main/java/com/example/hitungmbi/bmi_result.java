@@ -47,14 +47,13 @@ public class bmi_result extends AppCompatActivity {
         double weight = intent.getDoubleExtra("EXTRA_WEIGHT", 0.0); // kg
 
         if (height > 0 && weight > 0) {
-            double heightMeter = height / 100.0;
-            double bmi = weight / (heightMeter * heightMeter);
+            double bmi = BmiCalculator.calculateBmi(weight, height);
 
             // format 2 angka di belakang koma
             DecimalFormat df = new DecimalFormat("#.##");
             String bmiStr = df.format(bmi);
 
-            BmiInfo info = getBmiInfo(bmi);
+            BmiInfo info = BmiCalculator.getBmiInfo(bmi);
 
             textViewBmiValue.setText(bmiStr);
             textViewBmiCategory.setText(info.category);
@@ -76,51 +75,4 @@ public class bmi_result extends AppCompatActivity {
         });
     }
 
-
-    // Class kecil untuk menampung informasi BMI
-    private static class BmiInfo {
-        String category;
-        String title;
-        String description;
-        String detail;
-
-        BmiInfo(String category, String title, String description, String detail) {
-            this.category = category;
-            this.title = title;
-            this.description = description;
-            this.detail = detail;
-        }
-    }
-
-    private BmiInfo getBmiInfo(double bmi) {
-        if (bmi < 18.5) {
-            return new BmiInfo(
-                    "Kurus",
-                    "Berat Badan Kurang",
-                    "Berat badanmu berada di bawah rentang normal.",
-                    "Cobalah untuk meningkatkan asupan kalori dengan makanan bergizi seimbang dan konsultasikan ke tenaga kesehatan bila perlu."
-            );
-        } else if (bmi < 25) {
-            return new BmiInfo(
-                    "Normal",
-                    "Berat Badan Normal",
-                    "Berat badanmu berada pada rentang sehat.",
-                    "Pertahankan pola makan seimbang, rutin berolahraga, cukup tidur, dan kelola stres agar kesehatan tetap terjaga."
-            );
-        } else if (bmi < 30) {
-            return new BmiInfo(
-                    "Berlebih",
-                    "Berat Badan Berlebih",
-                    "Berat badanmu sedikit di atas rentang normal.",
-                    "Mulailah mengatur pola makan, kurangi makanan tinggi gula dan lemak jenuh, serta tambahkan aktivitas fisik ringan-sedang."
-            );
-        } else {
-            return new BmiInfo(
-                    "Obesitas",
-                    "Obesitas",
-                    "Berat badanmu sudah berada pada kategori obesitas.",
-                    "Disarankan berkonsultasi dengan dokter atau ahli gizi untuk rencana penurunan berat badan yang aman dan bertahap."
-            );
-        }
-    }
 }
