@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HitungMBI</string>
+
+
+    <!-- Deskripsi icon untuk aksesibilitas -->
+    <string name="cd_icon_person">Ikon siluet tubuh</string>
+
+    <!-- Teks lain kalau mau dipakai ulang -->
+    <string name="hint_height">Tinggi Badan (cm)</string>
+    <string name="hint_weight">Berat Badan (kg)</string>
+    <string name="btn_calculate">HITUNG SEKARANG</string>
+    <string name="footer_bmi">BMI membantu memantau kesehatan Anda.</string>
+
+    <string name="cd_icon_app">Ikon aplikasi Healthy BMI</string>
+
+</resources>

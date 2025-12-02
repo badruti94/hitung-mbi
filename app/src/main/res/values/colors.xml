@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna utama (bisa dipakai di tombol, accent, dll) -->
+    <color name="orange_main">#F47B35</color>
+    <color name="orange_light">#FFE0C2</color>
+
+    <!-- Background lembut -->
+    <color name="bg_soft">#FFF7F1</color>
+
+    <!-- Teks -->
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#888888</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
