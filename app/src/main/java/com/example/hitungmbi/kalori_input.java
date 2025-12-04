@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -28,6 +29,8 @@ public class kalori_input extends AppCompatActivity {
     private Spinner spinnerActivityLevel;
     private Button buttonHitungKalori;
 
+    private ImageButton backBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +50,15 @@ public class kalori_input extends AppCompatActivity {
         radioFemale           = findViewById(R.id.radioFemale);
         spinnerActivityLevel  = findViewById(R.id.spinnerActivityLevel);
         buttonHitungKalori    = findViewById(R.id.buttonHitungKalori);
+        backBtn = findViewById(R.id.backBtn);
 
         setupSpinnerActivity();
 
         buttonHitungKalori.setOnClickListener(v -> kirimDataKeResult());
+        backBtn.setOnClickListener(v -> {
+            finish();
+        });
+
     }
 
     private void setupSpinnerActivity() {

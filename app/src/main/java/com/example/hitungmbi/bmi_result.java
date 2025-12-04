@@ -45,6 +45,7 @@ public class bmi_result extends AppCompatActivity {
         Intent intent = getIntent();
         double height = intent.getDoubleExtra("EXTRA_HEIGHT", 0.0); // cm
         double weight = intent.getDoubleExtra("EXTRA_WEIGHT", 0.0); // kg
+        String gender = getIntent().getStringExtra("EXTRA_GENDER");
 
         if (height > 0 && weight > 0) {
             double bmi = BmiCalculator.calculateBmi(weight, height);
@@ -53,7 +54,7 @@ public class bmi_result extends AppCompatActivity {
             DecimalFormat df = new DecimalFormat("#.##");
             String bmiStr = df.format(bmi);
 
-            BmiInfo info = BmiCalculator.getBmiInfo(bmi);
+            BmiInfo info = BmiCalculator.getBmiInfo(bmi, gender);
 
             textViewBmiValue.setText(bmiStr);
             textViewBmiCategory.setText(info.category);

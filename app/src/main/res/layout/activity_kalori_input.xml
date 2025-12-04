@@ -175,4 +175,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/baseline_arrow_circle_left_24"
+        app:tint="@color/orange_main"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
