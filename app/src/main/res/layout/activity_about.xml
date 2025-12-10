@@ -84,7 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Healthy BMI adalah aplikasi sederhana untuk menghitung Indeks Massa Tubuh (BMI) dan memberikan informasi kategori berat badan Anda. Aplikasi ini dibuat sebagai tugas Ujian Tengah Semester mata kuliah Pemrograman Android."
+                android:text="HealthMate adalah aplikasi sederhana untuk menghitung Indeks Massa Tubuh (BMI) dan memberikan informasi kategori berat badan Anda, menghitung kebutuhan kalori harian, dan
+mendapatkan tips hidup sehat secara praktis. Aplikasi ini dibuat sebagai tugas Ujian Tengah Semester mata kuliah Pemrograman Bergerak."
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp" />
 
@@ -93,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Dibuat oleh:\n1. Nama Anggota 1 \n2. Nama Anggota 2 \n3. Nama Anggota 3 \n4. Nama Anggota 4 \n5. Nama Anggota 5 "
+                android:text="Dibuat oleh:\n1. Badru \n2. Vigo Hanuratama \n3. Amallinda Sekar Kinasih \n4. Nuramalia Putri \n5. Ayu Anjar F "
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp" />
 
@@ -103,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Kontak: email@contoh.com"
+                android:text="Kelompok 9"
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp" />
 
