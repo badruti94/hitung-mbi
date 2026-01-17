@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <PreferenceCategory android:title="Pengaturan Umum">
+        <EditTextPreference
+            android:key="pref_username"
+            android:title="Nama pengguna"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:key="pref_unit"
+            android:title="Satuan"
+            android:entries="@array/unit_entries"
+            android:entryValues="@array/unit_values"
+            android:defaultValue="metric"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Pengingat BMI (Alarm)">
+        <SwitchPreferenceCompat
+            android:key="pref_reminder_enabled"
+            android:title="Aktifkan pengingat harian"
+            android:defaultValue="false" />
+
+        <EditTextPreference
+            android:key="pref_reminder_time"
+            android:title="Jam pengingat (HH:mm)"
+            android:defaultValue="08:00"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Sinkronisasi (JobScheduler)">
+        <SwitchPreferenceCompat
+            android:key="pref_sync_wifi_only"
+            android:title="Hanya Wi-Fi"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

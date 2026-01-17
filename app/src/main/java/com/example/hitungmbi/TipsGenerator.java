@@ -27,7 +27,6 @@ public class TipsGenerator {
         textViewTips.setText(getRandomTip());
     }
 
-    // Method baru: PURE LOGIC, bisa di-unit-test
     public static String getRandomTip() {
         int index = random.nextInt(tipsList.length);
         return tipsList[index];

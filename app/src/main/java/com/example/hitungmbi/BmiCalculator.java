@@ -1,8 +1,6 @@
 package com.example.hitungmbi;
 
 public class BmiCalculator {
-    // Class kecil untuk menampung informasi BMI
-
 
     public static BmiInfo getBmiInfo(double bmi, String gender) {
         if (gender.equalsIgnoreCase("male")) {
